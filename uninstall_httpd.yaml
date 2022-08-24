@@ -1,0 +1,13 @@
+---
+- name: This playbook uninstall apache
+  hosts: webservers
+  become: true
+  tasks:
+  - name: Stop httpd
+    service:
+      name: httpd
+      state: stopped
+  - name: Uninstall httpd
+    yum: 
+      name: httpd
+      state: absent

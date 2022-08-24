@@ -1,0 +1,14 @@
+---
+- name: This playbook uninstall apache on ubuntu
+  hosts: dbservers
+  become: true
+  gather_facts: no
+  tasks:
+  - name: Stop apache2
+    service:
+      name: apache2
+      state: stopped
+  - name: Uninstall apache2
+    apt: 
+      name: apache2
+      state: absent

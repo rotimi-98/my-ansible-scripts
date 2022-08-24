@@ -1,0 +1,12 @@
+[redhatserver]
+172.31.1.33
+
+[webservers]
+172.31.11.129
+172.31.1.33
+
+[appservers]
+172.31.11.129
+
+[dbservers]
+172.31.11.55
